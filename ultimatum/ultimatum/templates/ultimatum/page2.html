@@ -1,0 +1,15 @@
+
+
+<!--{% extends "global/Page.html" %}-->
+
+{% block content %}
+    {% if player.id_in_group == 3 %}
+        <p>Player 1 sent {{ offer }} to Player 2.</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.punish.label_tag }}
+            {{ form.punish }}
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+{% endblock %}

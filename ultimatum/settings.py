@@ -3,6 +3,12 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
+        name='ultimatum',
+        display_name="mini-ultimatum game",
+        app_sequence=['ultimatum'],
+        num_demo_participants=3,
+    ),
+    dict(
         name='guess_two_thirds',
         display_name="Guess 2/3 of the Average",
         app_sequence=['guess_two_thirds', 'payment_info'],

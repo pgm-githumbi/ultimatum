@@ -1,0 +1,71 @@
+
+
+{% block content %}
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Results Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            .result-box {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 20px;
+            }
+            .result-header {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        {% if player.id_in_group == 1 %}
+        <div class="result-box">
+            <div class="result-header">Your Results</div>
+            <p>You decided to offer player_2 <strong>{{offer}} KES</strong></p>
+            {% if punish %}
+                <p>The punisher (player_3) decided to punish you for this small offer</p>
+            {% else %}
+                <p>The punisher deemed this offer acceptable</p>
+            {% endif %}
+            <p>You ended up with a payoff of <strong>{{ player1.payoff }} KES</strong></p>
+        </div>
+        {% endif %}
+
+        {% if player.id_in_group == 2 %}
+        <div class="result-box">
+            <div class="result-header">Your Results</div>
+            <p>Player_1 offered to send you <strong>{{ offer }} KES</strong></p>
+            {% if punish %}
+                <p>Player_3 decided to punish Player_1 as it was not enough.</p>
+                <p>You both thus receive nothing in this round.</p>
+            {% else %}
+                <p>Player_1's offer was deemed fair enough by the punisher</p>
+                <p>You ended up with a payoff of <strong>{{ player2.payoff }}</strong></p>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% if player.id_in_group == 3 %}
+        <div class="result-box">
+            <div class="result-header">Your Results</div>
+            {% if punish %}
+                <p>You decided to punish player_1 for offering <strong>{{ offer }}</strong> KES to player_2</p>
+            {% else %}
+                <p>You deemed player_1's offer of <strong>{{ offer }}</strong> KES acceptable</p>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% next_button %}
+    </body>
+    </html>
+
+{% endblock %}
