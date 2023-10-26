@@ -1,6 +1,7 @@
 # ultimatum
 An otree game
-# Project Name
+# Project Description
+This is a short version of the full [ultimatum game](https://en.wikipedia.org/wiki/Ultimatum_game)
 
 Page 1 - Player 1 is told that he has been endowed with Ksh 200 and is asked to send any amount between 0 and 200 to Player 2.
 
@@ -32,7 +33,7 @@ To run this project, you will need [Conda](https://docs.conda.io/en/latest/minic
 1. Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/pgm_githumbi/ultimatum.git
    ```
    Change your current directory to the project folder.
 
