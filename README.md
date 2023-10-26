@@ -1,5 +1,5 @@
-# ultimatum
-An otree game
+# Ultimatum
+An otree python game
 # Project Description
 This is a short version of the full [ultimatum game](https://en.wikipedia.org/wiki/Ultimatum_game)
 
@@ -35,9 +35,6 @@ To run this project, you will need [Conda](https://docs.conda.io/en/latest/minic
    ```bash
    git clone https://github.com/pgm_githumbi/ultimatum.git
    ```
-   Change your current directory to the project folder.
-
-bash
 
 2. cd into your-project directory
 
@@ -46,8 +43,13 @@ Create a Conda environment and activate it.
 ```bash
 
 conda env create -f environment.yml
-conda activate your_project_environment
+conda activate busara_interview
 ```
-Replace your_project_environment with your desired environment name. The environment.yml file contains a list of required packages and their versions.
+ The environment.yml file contains a list of required packages and their versions.
+
+ 3. Run the project
+    ```bash
+     otree devserver
+    ```
 
 
