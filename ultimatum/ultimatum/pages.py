@@ -104,7 +104,6 @@ class P2OfferAcceptPage(Page):
 
 class WaitForP2Decision(WaitPage):
     def after_all_players_arrive(self):
-        
         print(f'p2 has made the decision')
 
 class Results(Page):
@@ -124,13 +123,16 @@ class Results(Page):
         }
     
 
+class ExitSurvey(Page):
+    pass
 
-page_sequence = [#IntroductionPage,
+page_sequence = [IntroductionPage,
                  P1OfferPage,
                  WaitForP1,
                  PunisherDecisionPage, 
                  WaitForPunishDecision,
                  P2OfferAcceptPage,
                  WaitForP2Decision,
-                 Results
+                 Results,
+                 ExitSurvey,
                  ]

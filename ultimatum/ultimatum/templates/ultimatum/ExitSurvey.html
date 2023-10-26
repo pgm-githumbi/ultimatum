@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +87,7 @@
         </div>
     </div>
 
-    <button class="button" id="nextQuestion" style="display: none;">Next Question</button>
+    <button class="button" id="nextQuestion" disabled>Next Question</button>
 
     <script>
         // JavaScript to check Q2 and show/hide Q3
@@ -101,11 +102,21 @@
 
             if (userAnswer === correctAnswer) {
                 question3Container.style.display = 'block';  // Show Q3
-                nextQuestionButton.style.display = 'block';  // Show the Next Question button
+                nextQuestionButton.disabled = false;  // Show the Next Question button
             } else {
                 alert('Your answer to Q2 is incorrect. Please try again.');
+            }
+        });
+
+        nextQuestionButton.addEventListener('click', () => {
+            if (question3Container.style.display !== 'none') {
+                // Proceed to the next question or page
+                alert('Success! ');
+            } else {
+                alert('Please answer question 2 correctly before moving on.');
             }
         });
     </script>
 </body>
 </html>
+{% endblock %}
