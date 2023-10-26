@@ -40,12 +40,15 @@ To run this project, you will need [Conda](https://docs.conda.io/en/latest/minic
 
 Create a Conda environment and activate it.
 
+
 ```bash
 
 conda env create -f environment.yml
 conda activate busara_interview
 ```
  The environment.yml file contains a list of required packages and their versions.
+
+ [BSI_106.webm](https://github.com/pgm-githumbi/ultimatum/assets/85244060/a4ea2849-3f0c-4896-b939-7386855dcf92)
 
  3. Run the project
     ```bash
