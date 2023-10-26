@@ -1,0 +1,28 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome Punisher Decision Page</h1>
+        <h2>Youre the punisher</h2>
+        <p>
+            Player 1 offered player 2 {{ offer_made }} KES.
+            If this seems like a fair offer to you, approve this offer.
+            Otherwise, punish player one for making this kind of offer.
+        </p>
+    </div>
+    <div class="container">
+        {{ formfields }}
+        {% next_button %}
+    </div>
+</body>
+</html>
+
+{% endblock %}

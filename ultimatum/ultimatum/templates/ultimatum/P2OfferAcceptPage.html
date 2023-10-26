@@ -1,0 +1,56 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello there Player 2!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .decision-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        .positive-decision {
+            color: #008000;
+            font-size: 24px;
+        }
+        .negative-decision {
+            color: #FF0000;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="decision-box">
+        {% if punisher_decision %}
+            {% if punisher_decision == "punish" %}
+                <p class="negative-decision">
+                    The Punisher has decided to reject the offer, as it wasn't fair.
+                    You get 0 KES in this case, not the {{ offer_made }} KES player 1 offered.
+                </p>
+            {% else %}
+                <p class="positive-decision">
+                    The Punisher has decided that the offer was fair.
+                    You get {{ offer_made }} KES.
+                </p>
+            {% endif %}
+        {% else %}
+            <p>No decision has been made yet.</p>
+        {% endif %}
+    </div>
+    <div>
+        {% next_button %}
+    </div>
+</body>
+</html>
+
+{% endblock %}

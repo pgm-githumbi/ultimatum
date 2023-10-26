@@ -1,0 +1,25 @@
+{% block content %}
+
+<div class="container">
+    <h1>Welcome to the mini-ultimatum game</h1>
+    <h2>This is the introductory page</h2>
+
+    <p>
+        There are 3 players in this game. This game is played for 3 rounds.
+        <dl>
+            <dt>Player 1</dt>
+            <dd>Makes an offer to player 2</dd>
+            <dt>Player 3(The punisher)</dt>
+            <dd>Makes a decision as to whether the offer was fair</dd>
+            <dt>Player 2</dt>
+            <dd>Makes decision to accept or reject player 1's offer
+                provided player 3 allowed the offer
+            </dd>
+        </dl>
+    </p>
+</div>
+<div class="container">
+    {% next_button %}
+</div>
+
+{% endblock %}

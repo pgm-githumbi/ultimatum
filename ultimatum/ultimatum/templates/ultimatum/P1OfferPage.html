@@ -1,0 +1,36 @@
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="offer-box">
+        <div class="offer-box">
+            <h2>Player 1: Make an Offer to Player 2</h2>
+            <p class="instructions">
+                You are Player 1, and your task is to make an offer to Player 2. The offer you make should be fair enough to convince the Punisher to accept it. If the Punisher rejects the offer for being too low, you'll end up with nothing.
+            </p>
+            <p class="instructions">
+                If the Punisher accepts your offer, you will end up with the remainder of the value in your endowment amount minus the offer you gave to Player 2. Try to maximize your earnings in this game.
+            </p>
+            <p class="instructions">
+                Your available endowment amount is: <strong>{{ endowment_amount }}</strong> 
+            </p>
+            {{ formfields }}
+    </div>
+
+    <div>
+        {% next_button %}
+    </div>
+    
+
+</body>
+</html>
+
+{% endblock %}

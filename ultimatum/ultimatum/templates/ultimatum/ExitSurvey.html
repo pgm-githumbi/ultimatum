@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .questionnaire {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="questionnaire">
+        <div class="question">
+            <p>Q1. What is the capital city of Kenya? (Choose one from the given options)</p>
+        </div>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="Kisumu">
+                Kisumu
+            </label>
+            <label>
+                <input type="radio" name="q1" value="Nairobi">
+                Nairobi
+            </label>
+            <label>
+                <input type="radio" name="q1" value="Mombasa">
+                Mombasa
+            </label>
+        </div>
+    </div>
+
+    <div class="questionnaire">
+        <div class="question">
+            <p>Q2. What is 14 + 15? (Input a number)</p>
+        </div>
+        <div class="input-field">
+            <input type="text" name="q2" id="q2Answer" placeholder="Enter your answer">
+        </div>
+        <button class="button" id="checkQ2">Check Answer</button>
+    </div>
+
+    <div class="questionnaire" id="question3Container" style="display: none;">
+        <div class="question">
+            <p>Q3. What is the population of Kenya? (Input a number)</p>
+        </div>
+        <div class="input-field">
+            <input type="text" name="q3" placeholder="Enter your answer">
+        </div>
+    </div>
+
+    <button class="button" id="nextQuestion" style="display: none;">Next Question</button>
+
+    <script>
+        // JavaScript to check Q2 and show/hide Q3
+        const checkQ2Button = document.getElementById('checkQ2');
+        const nextQuestionButton = document.getElementById('nextQuestion');
+        const q2AnswerInput = document.getElementById('q2Answer');
+        const question3Container = document.getElementById('question3Container');
+
+        checkQ2Button.addEventListener('click', () => {
+            const userAnswer = parseInt(q2AnswerInput.value);
+            const correctAnswer = 14 + 15;
+
+            if (userAnswer === correctAnswer) {
+                question3Container.style.display = 'block';  // Show Q3
+                nextQuestionButton.style.display = 'block';  // Show the Next Question button
+            } else {
+                alert('Your answer to Q2 is incorrect. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
