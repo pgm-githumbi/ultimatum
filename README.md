@@ -29,7 +29,6 @@ These instructions will help you set up the project environment and get it runni
 To run this project, you will need [Conda](https://docs.conda.io/en/latest/miniconda.html) installed on your system.
 
 ### Create a Conda Environment
-
 1. Clone this repository to your local machine.
 
    ```bash
@@ -38,21 +37,22 @@ To run this project, you will need [Conda](https://docs.conda.io/en/latest/minic
 
 2. cd into your-project directory
 
-Create a Conda environment and activate it.
+3. Create a Conda environment and activate it.
 
 
-```bash
-
-conda env create -f environment.yml
-conda activate busara_interview
-```
+   ```bash
+   
+   conda env create -f environment.yml
+   conda activate busara_interview
+   ```
  The environment.yml file contains a list of required packages and their versions.
 
 
- 3. Run the project
+ 4. Run the project
     ```bash
      otree devserver
     ```
+ 4. Open your browser at ```http://localhost:8000/```
 
 [BSI_106.webm](https://github.com/pgm-githumbi/ultimatum/assets/85244060/a4ea2849-3f0c-4896-b939-7386855dcf92)
 
