@@ -14,8 +14,8 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    POSITIVE_DECISION = 'positive'
-    NEGATIVE_DECISION = 'negative'
+    #POSITIVE_DECISION = 'positive'
+    #NEGATIVE_DECISION = 'negative'
     def __init__(self, *args, **kwargs) -> None:
         self.punisher_decision = None
         super().__init__(*args, **kwargs)
